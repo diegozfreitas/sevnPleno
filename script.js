@@ -519,30 +519,40 @@ let dataMock = [
   },
 ];
 
-const renderGame = () => {
+const renderGame = (data) => {
   return `
     <div class="itemGame">
         <div class="team teamLeft">
             icon
-            <h2>team name</h2>
-            <h3>team sore</h3>
+            <h2>${data.team_home_name}</h2>
+            <h3>${data.team_home_score}</h3>
         </div>
         <div>
             icon x
         </div>
         <div class="team teamRight">
             icon
-            <h2>team name</h2>
-            <h3>team sore</h3>
+            <h2>${data.team_away_name}</h2>
+            <h3>${data.team_away_score}</h3>
         </div>
     </div>
   `;
 };
 
-const renderGameByRound = () => {
-  document.querySelector(".contentGameRoundBody").innerHTML = `${renderGame(
-    1
-  )}`;
+const getRound = (round) => {
+  return dataMock.find((item) => item.round === round);
+};
+
+const renderGameByRound = (gameRound) => {
+  const data = getRound(gameRound);
+
+  document.querySelector("#round").innerText = data.round;
+
+  document.querySelector(".contentGameRoundBody").innerHTML = `${data.games
+    .map((item) => {
+      return renderGame(item);
+    })
+    .join("")}`;
 };
 
 const buttonNext = document.querySelector("#buttonNext");
@@ -570,4 +580,4 @@ buttonPrev.addEventListener("click", () => {
   navigate("prev");
 });
 
-renderGameByRound()
+renderGameByRound(1);
