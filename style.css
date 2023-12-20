@@ -39,3 +39,26 @@ header .container h1 {
   line-height: normal;
 }
 /* end header */
+
+/* start main */
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+main .container {
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
+/* end main */
+
+/* start main title*/
+main .container h3.descriptionContent {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* end main title*/
