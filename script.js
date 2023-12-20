@@ -519,6 +519,32 @@ let dataMock = [
   },
 ];
 
+const renderGame = () => {
+  return `
+    <div class="itemGame">
+        <div class="team teamLeft">
+            icon
+            <h2>team name</h2>
+            <h3>team sore</h3>
+        </div>
+        <div>
+            icon x
+        </div>
+        <div class="team teamRight">
+            icon
+            <h2>team name</h2>
+            <h3>team sore</h3>
+        </div>
+    </div>
+  `;
+};
+
+const renderGameByRound = () => {
+  document.querySelector(".contentGameRoundBody").innerHTML = `${renderGame(
+    1
+  )}`;
+};
+
 const buttonNext = document.querySelector("#buttonNext");
 const buttonPrev = document.querySelector("#buttonPrev");
 
@@ -540,6 +566,8 @@ buttonPrev.addEventListener("click", () => {
     return;
   }
   buttonNext.classList.remove("disabled");
-  
+
   navigate("prev");
 });
+
+renderGameByRound()
