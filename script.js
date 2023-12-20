@@ -656,7 +656,30 @@ const buttonNext = document.querySelector("#buttonNext");
 const buttonPrev = document.querySelector("#buttonPrev");
 
 const navigate = (direction) => {
-  console.log(direction);
+  const showRound = Number(document.querySelector("#round").innerText);
+
+  if (direction === "prev") {
+    const findPrevRound = dataMock.find((item) => item.round === showRound - 1);
+
+    if (findPrevRound !== undefined) {
+      document.querySelector("#round").innerText = findPrevRound.round;
+      renderGame(findPrevRound.round);
+      findPrevRound.round == 1 && buttonPrev.classList.add("disabled");
+    } else {
+      buttonPrev.classList.add("disabled");
+    }
+  } else if (direction === "next") {
+    const findNextRound = dataMock.find((item) => item.round === showRound + 1);
+
+    if (findNextRound !== undefined) {
+      document.querySelector("#round").innerText = findNextRound.round;
+      renderGame(findNextRound.round);
+      findNextRound.round === dataMock.at(-1).round &&
+        buttonNext.classList.add("disabled");
+    } else {
+      buttonNext.classList.add("disabled");
+    }
+  }
 };
 
 buttonNext.addEventListener("click", () => {
