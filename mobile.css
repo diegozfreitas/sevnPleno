@@ -1,0 +1,24 @@
+@media (max-width: 768px) {
+    /* start main */
+    main .container {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+    /* end main */
+  
+    /* start main title*/
+    main .container h3.descriptionContent {
+      font-size: 18px;
+    }
+    /* end main title*/
+  
+    /* start main GameRound*/
+    main .contentGameRound {
+      width: 100%;
+      margin: 40px auto 0;
+    }
+    /* end main GameRound*/
+  }
+  
