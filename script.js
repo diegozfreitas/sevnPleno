@@ -518,3 +518,28 @@ let dataMock = [
     ],
   },
 ];
+
+const buttonNext = document.querySelector("#buttonNext");
+const buttonPrev = document.querySelector("#buttonPrev");
+
+const navigate = (direction) => {
+  console.log(direction);
+};
+
+buttonNext.addEventListener("click", () => {
+  if (buttonNext.classList.contains("disabled")) {
+    return;
+  }
+  buttonPrev.classList.remove("disabled");
+
+  navigate("next");
+});
+
+buttonPrev.addEventListener("click", () => {
+  if (buttonPrev.classList.contains("disabled")) {
+    return;
+  }
+  buttonNext.classList.remove("disabled");
+  
+  navigate("prev");
+});
