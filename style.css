@@ -81,6 +81,41 @@ main .contentGameRound .contentGameRoundHeader {
   display: flex;
   margin-bottom: 24px;
 }
+main .contentGameRound .contentGameRoundHeader div.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+main .contentGameRound .contentGameRoundHeader div {
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+main .contentGameRound .contentGameRoundHeader div:nth-child(2) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: unset;
+}
+main .contentGameRound .contentGameRoundHeader div:nth-child(2) h3 {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+main .contentGameRound .contentGameRoundHeader div:nth-child(2) h4 {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 /* end main contentGameRoundHeader*/
 
 /* start main contentGameRoundBody with itemGame*/
