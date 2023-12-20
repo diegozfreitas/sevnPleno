@@ -62,3 +62,69 @@ main .container h3.descriptionContent {
   line-height: normal;
 }
 /* end main title*/
+
+/* start main GameRound*/
+main .contentGameRound {
+  width: 340px;
+  height: 394px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  margin: 80px auto 0;
+  padding: 21px;
+}
+/* end main GameRound*/
+
+/* start main contentGameRoundHeader*/
+main .contentGameRound .contentGameRoundHeader {
+  display: flex;
+  margin-bottom: 24px;
+}
+/* end main contentGameRoundHeader*/
+
+/* start main contentGameRoundBody with itemGame*/
+main .contentGameRound .contentGameRoundBody .itemGame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
+  gap: 20px;
+  padding: 16px 0;
+}
+main .contentGameRound .contentGameRoundBody .itemGame:last-child {
+  border-bottom: 1px solid transparent;
+}
+main .contentGameRound .contentGameRoundBody .itemGame .team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 45%;
+}
+main .contentGameRound .contentGameRoundBody .itemGame .team.teamLeft {
+  flex-direction: row;
+  padding-right: 8px;
+}
+main .contentGameRound .contentGameRoundBody .itemGame .team.teamRight {
+  flex-direction: row-reverse;
+  padding-left: 8px;
+}
+main .contentGameRound .contentGameRoundBody .itemGame .team h2 {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+main .contentGameRound .contentGameRoundBody .itemGame .team h3 {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+/* end main contentGameRoundBody with itemGame*/
