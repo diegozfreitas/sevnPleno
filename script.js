@@ -97,7 +97,6 @@ const renderIcon = (teamId) => {
     `;
 };
 
-
 const renderGame = (data) => {
   return `
   <div class="itemGame">
